@@ -5,7 +5,7 @@
 import os
 import sys
 import argparse
-from logging import Formatter, getLogger, StreamHandler, DEBUG, WARNING
+from logging import Formatter, getLogger, StreamHandler, DEBUG, WARNING, FileHandler
 
 __author__ = 'rindybell'
 __date__ = ""
@@ -13,10 +13,19 @@ __date__ = ""
 """ variables """
 formatter = Formatter('%(asctime)-15s - %(levelname)-8s - %(message)s')
 logger = getLogger(__name__)
+logger.setLevel(DEBUG)
+
+# handler1
 handler = StreamHandler(sys.stdout)
-handler.setLevel(WARNING)
 handler.setFormatter(formatter)
+
+# handler2 (file)
+handler2 = FileHandler("test.log")
+handler2.setLevel(WARNING)
+handler2.setFormatter(formatter)
+
 logger.addHandler(handler)
+# logger.addHandler(handler2)
 
 
 def main(options={}):
