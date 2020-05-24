@@ -29,6 +29,17 @@ logger.addHandler(handler)
 
 
 def main(options={}):
+    """関数の説明タイトル
+
+    関数についての説明文
+
+    Args:
+        引数の名前 (引数の型): 引数の説明
+
+    Returns:
+        戻り値の型: 戻り値の説明 (例 : True なら成功、False なら失敗)
+    """
+    
     return
 
 
