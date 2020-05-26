@@ -7,7 +7,7 @@ import sys
 import argparse
 from logging import Formatter, getLogger, StreamHandler, DEBUG, WARNING, FileHandler
 
-__author__ = 'rindybell'
+__author__ = ""
 __date__ = ""
 
 """ variables """
@@ -29,7 +29,7 @@ logger.addHandler(handler)
 
 
 def main(options={}):
-    """関数の説明タイトル
+    """ 関数の説明タイトル
 
     関数についての説明文
 
