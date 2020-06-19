@@ -20,9 +20,9 @@ handler = StreamHandler(sys.stdout)
 handler.setFormatter(formatter)
 
 # handler2 (file)
-handler2 = FileHandler("test.log")
-handler2.setLevel(WARNING)
-handler2.setFormatter(formatter)
+# handler2 = FileHandler("test.log")
+# handler2.setLevel(WARNING)
+# handler2.setFormatter(formatter)
 
 logger.addHandler(handler)
 # logger.addHandler(handler2)
