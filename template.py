@@ -18,6 +18,7 @@ logger.setLevel(DEBUG)
 # handler1
 handler = StreamHandler(sys.stdout)
 handler.setFormatter(formatter)
+handler.setLevel (os.environ.get("LOG_LEVEL", default="DEBUG"))
 
 # handler2 (file)
 # handler2 = FileHandler("test.log")
@@ -40,6 +41,12 @@ def main(options={}):
         戻り値の型: 戻り値の説明 (例 : True なら成功、False なら失敗)
     """
     
+    logger.error ("hello (error)")
+    logger.warning("hello (warn)")
+    logger.info ("hello (info)")
+    logger.debug ("hello (debug)")
+    
+
     return
 
 
